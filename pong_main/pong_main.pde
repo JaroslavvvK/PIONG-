@@ -321,7 +321,7 @@ static void textDraw(PGraphics g, int x, int y, String text, int size, color col
     g.textAlign(alignX, alignY);
     g.textSize(size-15);
     g.fill(colour);
-    g.text(text, x, y);    
+    g.text(text, x, y); 
 }
 
 static boolean pingOrPong;
@@ -359,6 +359,7 @@ static boolean ballsCountChange; //when you selecting gamemode it tracks the cha
 static boolean racketMode; //0-normal 1-predictable
 static boolean playVsAi;
 
+static int titleColor = 0;
 static int state = 0; //state 0 choosing mode, state 1 game, state 2 end
 static int ballsCount = 2;
 static int maxScore = 4;
@@ -442,11 +443,11 @@ void setup() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static int titleColor = 0;
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void draw() {   
+void draw() {
     if (logoTimer == 0) {
         balls.beginDraw();
         balls.push();
